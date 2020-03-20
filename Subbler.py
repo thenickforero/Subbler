@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from extract_data import extract_audio
 from get_upload_link import get_upload_link
 from upload_audiofile import upload_audiofile
