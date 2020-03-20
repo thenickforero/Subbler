@@ -8,11 +8,11 @@ from get_transcription_data import get_transcription_data
 from group_sentences import get_group_sentences as group_lines
 from translate_sentences import translate_sentences
 from subtitles_creator import subtitles_maker
-
+from os import remove
 
 [input_language, output_language, filename] = [
     'en-US',
-    'de',
+    'es',
     'video.mp4'
 ]
 
@@ -36,3 +36,4 @@ else:
 
 subs_filename = f'{filename[0:-4]}.srt'
 subtitles_maker(subs_filename, subtitles_data)
+remove(audioFilename)
