@@ -12,11 +12,14 @@ def time_stamp(time_in_seconds):
     minutes = floor(time / 60) % 60
     seconds = floor(time - minutes * 60)
     milliseconds = int(str(time).split('.')[1])
-    if (milliseconds) < 100:
+
+    if milliseconds < 10:
+        milliseconds *= 100
+    else:
         milliseconds *= 10
-        if (milliseconds) < 100:
-            milliseconds *= 10
+
     stamp = f'{timeFormatter(hours, 2)}:{timeFormatter(minutes, 2)}:{timeFormatter(seconds, 2)},{milliseconds}'
+
     return stamp
 
 
