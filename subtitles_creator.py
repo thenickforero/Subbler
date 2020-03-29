@@ -5,7 +5,7 @@ from math import floor
 from sys import exit
 
 
-def timeFormatter(num, size):
+def time_formatter(num, size):
     """Adjust a number to a specific size using padding leading zeroes if
     needed.
 
@@ -42,8 +42,8 @@ def time_stamp(time_in_seconds):
     seconds = floor(time - minutes * 60)
     milliseconds = int(str(time).split('.')[1])
 
-    stamp = (f'{timeFormatter(hours, 2)}:{timeFormatter(minutes, 2)}:'
-             f'{timeFormatter(seconds, 2)},{timeFormatter(milliseconds, 3)}')
+    stamp = (f'{time_formatter(hours, 2)}:{time_formatter(minutes, 2)}:'
+             f'{time_formatter(seconds, 2)},{time_formatter(milliseconds, 3)}')
 
     return stamp
 

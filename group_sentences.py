@@ -80,6 +80,7 @@ def get_group_sentences(data):
         exit(1)
 
     try:
+        # Create a list of sublists with a length of ten words
         stamps = chunk_array(data['data'], 10)
         subtitles = []
 
